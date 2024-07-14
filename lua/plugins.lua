@@ -17,15 +17,7 @@ return require('packer').startup(function(use)
 
   -- plugins
   use { "catppuccin/nvim", as = "catppuccin" }
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
-    },
-    config = function() 
-      require("nvim-tree").setup()
-    end
-  }
+  use 'preservim/nerdtree'
   use { 
 	'nvim-lualine/lualine.nvim',
 	requires = {'kyazdani42/nvim-web-devicons', opt = true},
