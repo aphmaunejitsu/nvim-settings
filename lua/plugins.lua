@@ -26,6 +26,30 @@ return require('packer').startup(function(use)
   use { 'dense-analysis/ale'}
 
   use {'neoclide/coc.nvim', branch = 'release'}
+  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+
+  -- Lua
+    use {
+      '0x00-ketsu/markdown-preview.nvim',
+      ft = {'md', 
+        'markdown', 
+        'mkd', 
+        'mkdn', 
+        'mdwn', 
+        'mdown', 
+        'mdtxt', 
+        'mdtext', 
+        'rmd', 
+        'wiki'
+      },
+      config = function()
+        require('markdown-preview').setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the setup section below
+        }
+      end
+    }
 
 end)
 
