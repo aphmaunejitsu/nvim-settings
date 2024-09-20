@@ -2,8 +2,8 @@ require('nvim-tree').setup {
   sort_by = 'extension',
 
   view = {
-    width = '20%',
-    side = 'right',
+    width = '30%',
+    side = 'left',
     signcolumn = 'no',
   },
 
