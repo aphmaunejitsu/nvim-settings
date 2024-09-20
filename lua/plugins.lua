@@ -17,10 +17,12 @@ return require('packer').startup(function(use)
 
   -- plugins
   use { "catppuccin/nvim", as = "catppuccin" }
-  use 'preservim/nerdtree'
   use { 
 	'nvim-lualine/lualine.nvim',
-	requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = function()
+        require 'option/lualine'
+    end,
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
   }
 
   use { 'dense-analysis/ale'}
@@ -28,28 +30,37 @@ return require('packer').startup(function(use)
   use {'neoclide/coc.nvim', branch = 'release'}
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
-  -- Lua
-    use {
-      '0x00-ketsu/markdown-preview.nvim',
-      ft = {'md', 
-        'markdown', 
-        'mkd', 
-        'mkdn', 
-        'mdwn', 
-        'mdown', 
-        'mdtxt', 
-        'mdtext', 
-        'rmd', 
-        'wiki'
-      },
-      config = function()
-        require('markdown-preview').setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the setup section below
-        }
-      end
-    }
+  use {
+    '0x00-ketsu/markdown-preview.nvim',
+    ft = {'md', 
+      'markdown', 
+      'mkd', 
+      'mkdn', 
+      'mdwn', 
+      'mdown', 
+      'mdtxt', 
+      'mdtext', 
+      'rmd', 
+      'wiki'
+    },
+    config = function()
+      require('markdown-preview').setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the setup section below
+      }
+    end
+  }
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    config = function() 
+        require 'option/nvim-tree' 
+    end,
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
 
 end)
 
