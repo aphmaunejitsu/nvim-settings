@@ -2,7 +2,7 @@ require('nvim-tree').setup {
   sort_by = 'extension',
 
   view = {
-    width = '22%',
+    width = '15%',
     side = 'left',
     signcolumn = 'no',
   },

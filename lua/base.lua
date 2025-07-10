@@ -1,6 +1,9 @@
+-- 基本設定
 vim.cmd("autocmd!")
-vim.scriptencodeing = "utf-8"
-vim.wo.number =true
 
-vim.api.nvim_set_var('loaded_netrw', 1)
-vim.api.nvim_set_var('loaded_netrwPlugin', 1)
+-- エンコーディング設定
+vim.scriptencoding = "utf-8"
+
+-- netrwを無効化（nvim-treeを使用するため）
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
