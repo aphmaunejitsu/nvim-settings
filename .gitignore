@@ -1,0 +1,39 @@
+# Neovim
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Vim config
+*.vim
+
+# Packer plugins
+site/
+pack/
+
+# Packer generated
+plugin/packer_compiled.lua
+lua/packer_compiled.lua
+packer_compiled.lua
+
+# OS/Editor
+.DS_Store
+*.log
+
+# Python virtualenv
+.venv/
+venv/
+
+# Node modules
+node_modules/
+
+# Personal/secret
+*.local.lua
+
+# Compiled
+*.pyc
+__pycache__/
+
+# VSCode
+.vscode/
