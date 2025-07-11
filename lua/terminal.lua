@@ -8,6 +8,8 @@ vim.o.expandtab = true
 vim.o.termguicolors = true
 vim.o.cursorline = true
 vim.o.clipboard = 'unnamedplus'
+vim.o.winblend = 20
+vim.o.pumblend = 20
 
 require('plugins')
 
@@ -52,4 +54,6 @@ end
 
 vim.defer_fn(function()
   vim.cmd[[colorscheme shades_of_purple]]
+  vim.cmd [[ highlight Normal guibg=NONE ctermbg=NONE ]]
+  vim.cmd [[ highlight NonText guibg=NONE ctermbg=NONE ]]
 end, 0)

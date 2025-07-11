@@ -1,7 +1,5 @@
-
-
 if vim.g.vscode then
-  require('vscode')
+  require('vscode_config')
 else
   require('terminal')
 end
