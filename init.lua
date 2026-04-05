@@ -1,5 +1,8 @@
 if vim.g.vscode then
   require('vscode_config')
 else
-  require('terminal')
+  require('core.options')
+  require('core.keymaps')
+  require('core.autocmds')
+  require('plugins')
 end
